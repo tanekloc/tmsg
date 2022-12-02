@@ -17,11 +17,12 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
         with:
           node-version: 18
+          registry-url: 'https://registry.npmjs.org'
       - run: npm ci
         if: ${{ steps.release.outputs.releases_created }}
       - run: npm run build --workspaces
         if: ${{ steps.release.outputs.releases_created }}
-      - run: npm publish --workspaces
+      - run: npm publish --workspaces --registry https://registry.npmjs.org/ --auth=${{ env.NPM_AUTH_TOKEN }}
         if: ${{ steps.release.outputs.releases_created }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
