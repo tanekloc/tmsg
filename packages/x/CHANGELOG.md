@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/tanekloc/tmsg/compare/x-v0.0.4...x-v0.0.5) (2022-12-02)
+
+
+### Miscellaneous Chores
+
+* update readme ([f6feffd](https://github.com/tanekloc/tmsg/commit/f6feffd9382332c71b3eb4481aef48c117fdbf1c))
+
 ## [0.0.4](https://github.com/tanekloc/tmsg/compare/x-v0.0.3...x-v0.0.4) (2022-12-02)
 
 
