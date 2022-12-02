@@ -8,5 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release
         with:
           command: manifest
+      - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v3
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: 18
+      - run: npm ci --workspaces
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm build --workspaces
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm publish --workspaces
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
