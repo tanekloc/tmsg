@@ -1,6 +1,6 @@
 {
   "name": "@tmsg/x",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "tsc --build --clean && tsc --build",
     "test": "node dist/tmsgx.js sync --outDir ./fixtures --projectDir ../core"
