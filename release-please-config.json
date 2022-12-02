@@ -1,0 +1,15 @@
+{
+  "packages": {
+    "packages/runtime": {},
+    "packages/x": {}
+  },
+  "plugins": [
+    {
+      "type": "node-workspace"
+    }
+  ],
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "always-link-local": true,
+  "group-pull-request-title-pattern": "chore: release @tmsg"
+}
