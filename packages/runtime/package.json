@@ -1,0 +1,21 @@
+{
+  "name": "@tmsg/core",
+  "version": "0.0.1",
+  "exports": "./dist/src/core.js",
+  "types": "dist/src/core.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "dist/src"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build",
+    "test": "npx tsd --files test/types.test-d.ts && node --test dist/test/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}

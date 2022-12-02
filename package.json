@@ -1,0 +1,21 @@
+{
+  "name": "tmsg",
+  "version": "0.0.1",
+  "description": "i18n for TypeScript",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "format": "npx prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "prettier": "2.8.0",
+    "tsd": "^0.24.1",
+    "typescript": "^5.0.0-dev.20221201"
+  },
+  "workspaces": [
+    "packages/runtime",
+    "packages/x"
+  ]
+}

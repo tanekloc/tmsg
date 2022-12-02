@@ -1,0 +1,28 @@
+{
+  "name": "@tmsg/x",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build",
+    "test": "node dist/tmsgx.js sync --outDir ./fixtures --projectDir ../core"
+  },
+  "bin": {
+    "tmsgx": "./dist/tmsgx.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@messageformat/core": "^3.0.1",
+    "glob": "^8.0.3",
+    "yargs": "^17.6.2"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/yargs": "^17.0.14"
+  }
+}
