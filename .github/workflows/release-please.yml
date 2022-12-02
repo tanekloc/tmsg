@@ -19,7 +19,7 @@ jobs:
           node-version: 18
       - run: npm ci --workspaces
         if: ${{ steps.release.outputs.releases_created }}
-      - run: npm build --workspaces
+      - run: npm run build --workspaces
         if: ${{ steps.release.outputs.releases_created }}
       - run: npm publish --workspaces
         if: ${{ steps.release.outputs.releases_created }}
