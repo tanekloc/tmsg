@@ -17,7 +17,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
         with:
           node-version: 18
-      - run: npm ci --workspaces
+      - run: npm ci
         if: ${{ steps.release.outputs.releases_created }}
       - run: npm run build --workspaces
         if: ${{ steps.release.outputs.releases_created }}
