@@ -10,7 +10,7 @@ const i18n = configure({
 });
 
 app.get('/', async (req, res) => {
-  const t = await i18n.getT('de');
+  const t = await i18n.buildT('de');
   res.send(
     t('Hello world {%url}!', {
       url: 'https://example.com',

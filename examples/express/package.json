@@ -16,10 +16,10 @@
   "type": "module",
   "dependencies": {
     "@tmsg/runtime": "file:../../packages/runtime",
-    "@tmsg/x": "file:../../packages/x",
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@tmsg/x": "^0.0.5",
     "@types/express": "^4.17.14",
     "typescript": "^4.9.3"
   }
