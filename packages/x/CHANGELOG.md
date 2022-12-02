@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/tanekloc/tmsg/compare/x-v0.0.1...x-v0.0.2) (2022-12-02)
+
+
+### Bug Fixes
+
+* build outputs ([63562d4](https://github.com/tanekloc/tmsg/commit/63562d4c516384d500c70a0519d62e636d0d3841))
+
 ## [0.0.1](https://github.com/tanekloc/tmsg/compare/x-v0.0.1...x-v0.0.1) (2022-12-02)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@tmsg/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "exports": "./dist/src/core.js",
   "types": "dist/src/core.d.ts",
   "directories": {
