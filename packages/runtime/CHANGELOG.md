@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/tanekloc/tmsg/compare/core-v0.0.2...core-v0.0.3) (2022-12-02)
+
+
+### Miscellaneous Chores
+
+* update readme ([906a2ac](https://github.com/tanekloc/tmsg/commit/906a2ac7538f23ef9117360090abf32fb667cfb1))
+
 ## [0.0.2](https://github.com/tanekloc/tmsg/compare/core-v0.0.1...core-v0.0.2) (2022-12-02)
 
 
