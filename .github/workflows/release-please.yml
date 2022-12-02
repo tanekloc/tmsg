@@ -22,7 +22,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
       - run: npm run build --workspaces
         if: ${{ steps.release.outputs.releases_created }}
-      - run: npm publish --workspaces --registry https://registry.npmjs.org/ --auth=${{ env.NPM_AUTH_TOKEN }}
+      - run: npm publish --workspaces --access=public
         if: ${{ steps.release.outputs.releases_created }}
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
