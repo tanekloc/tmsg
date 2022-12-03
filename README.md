@@ -60,4 +60,4 @@ tmsgx compile --outDir ./dist/locales --localesDir ./locales
 - Merge new strings with old strings during extraction.
 - Configure the name of the `t` function.
 - More example projects.
-- Improve parsing of arguments.
+- Improve parsing of arguments and see if it's possible to get rid of the required `%` character.
