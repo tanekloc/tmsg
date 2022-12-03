@@ -4,17 +4,42 @@ import path from 'path';
 
 import { normalizePath } from './utils.js';
 
-export function extract(outDir: string, projectDir: string) {
+export function extract(outDir: string, projectDir: string, locales: string[]) {
   projectDir = normalizePath(projectDir);
   outDir = normalizePath(outDir);
   const messages = getMessages(projectDir);
 
-  for (const locale of ['en', 'de']) {
-    fs.writeFileSync(
-      path.join(outDir, `${locale}.json`),
-      JSON.stringify(messages, null, 2),
-    );
+  for (const locale of locales) {
+    const targetFile = path.join(outDir, `${locale}.json`);
+    let existingMessages: Record<string, string> = {};
+    if (fs.existsSync(targetFile)) {
+      existingMessages = JSON.parse(fs.readFileSync(targetFile, 'utf-8'));
+    }
+    existingMessages = mergeMessages(existingMessages, messages);
+    fs.writeFileSync(targetFile, JSON.stringify(messages, null, 2));
   }
+}
+
+export function mergeMessages(
+  existingMessages: Record<string, string>,
+  extractedMessages: Record<string, string>,
+): Record<string, string> {
+  const existingKeys = new Set(Object.keys(existingMessages));
+  const extractedKeys = new Set(Object.keys(extractedMessages));
+
+  for (const existingKey of existingKeys) {
+    if (!extractedKeys.has(existingKey)) {
+      delete existingMessages[existingKey];
+    }
+  }
+
+  for (const extractedKey of extractedKeys) {
+    if (!existingKeys.has(extractedKey)) {
+      existingMessages[extractedKey] = extractedMessages[extractedKey];
+    }
+  }
+
+  return existingMessages;
 }
 
 function asMessageFormat(message: string, keys: string[]) {
@@ -24,7 +49,7 @@ function asMessageFormat(message: string, keys: string[]) {
   return message;
 }
 
-function getMessages(projectDir: string) {
+function getMessages(projectDir: string): Record<string, string> {
   const configPath = ts.findConfigFile(projectDir, ts.sys.fileExists);
   if (!configPath) {
     throw new Error('tsconfig not found');

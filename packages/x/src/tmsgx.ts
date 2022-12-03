@@ -19,9 +19,17 @@ yargs(process.argv.slice(2))
         type: 'string',
         describe: 'The target directory to write the messages to.',
       });
+      yargs.option('locales', {
+        type: 'array',
+        describe: 'Locale files to generate.',
+      });
     },
     function (argv) {
-      extract(argv['outDir'] as string, argv['projectDir'] as string);
+      extract(
+        argv['outDir'] as string,
+        argv['projectDir'] as string,
+        argv['locales'] as string[],
+      );
     },
   )
   .command(
