@@ -4,6 +4,7 @@ import fs from 'fs';
 
 import MessageFormat from '@messageformat/core';
 import compileModule from '@messageformat/core/lib/compile-module.js';
+import { normalizePath } from './utils.js';
 
 export function compile(localesDir: string, outDir: string) {
   localesDir = normalizePath(localesDir);
@@ -17,8 +18,4 @@ export function compile(localesDir: string, outDir: string) {
     fs.mkdirSync(path.join(outDir, locale), { recursive: true });
     fs.writeFileSync(path.join(outDir, locale, `${locale}.js`), msgModule);
   }
-}
-
-function normalizePath(p: string): string {
-  return path.normalize(path.isAbsolute(p) ? p : path.join(process.cwd(), p));
 }

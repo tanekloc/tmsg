@@ -2,6 +2,8 @@ import ts from 'typescript';
 import fs from 'fs';
 import path from 'path';
 
+import { normalizePath } from './utils.js';
+
 export function extract(outDir: string, projectDir: string) {
   projectDir = normalizePath(projectDir);
   outDir = normalizePath(outDir);
@@ -20,10 +22,6 @@ function asMessageFormat(message: string, keys: string[]) {
     message = message.replaceAll('%' + param, param);
   }
   return message;
-}
-
-function normalizePath(p: string): string {
-  return path.normalize(path.join(process.cwd(), p));
 }
 
 function getMessages(projectDir: string) {

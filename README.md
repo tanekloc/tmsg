@@ -47,6 +47,17 @@ tmsgx sync --outDir ./locales --projectDir .
 tmsgx compile --outDir ./dist/locales --localesDir ./locales
 ```
 
+## Limitations
+
+- Using the function called `t` is important for the CLI to be able to extract strings.
+
 ## [Example projects](/examples/)
 
 1. [`express`](/examples/express)
+
+## Roadmap
+
+- Merge new strings with old strings during extraction.
+- Configure the name of the `t` function.
+- More example projects.
+- Improve parsing of arguments.
