@@ -1,8 +1,8 @@
 {
-  "name": "@tmsg/core",
+  "name": "@tmsg/runtime",
   "version": "0.0.5",
-  "exports": "./dist/src/core.js",
-  "types": "dist/src/core.d.ts",
+  "exports": "./dist/src/runtime.js",
+  "types": "dist/src/runtime.d.ts",
   "directories": {
     "test": "test"
   },

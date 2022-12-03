@@ -1,4 +1,4 @@
-import { configure } from '../src/core.js';
+import { configure } from '../src/runtime.js';
 import { equal } from 'assert/strict';
 import { describe, it } from 'node:test';
 import url from 'url';
