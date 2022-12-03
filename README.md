@@ -7,9 +7,8 @@
 In your app, you have strings that need translating. Some of the strings are actually templates. So you define a string like this:
 
 ```ts
-const myString = 'Hello, {NAME}!'.console.log(
-  i18n(myString, { NAME: 'Tanek' }),
-);
+const myString = 'Hello, {NAME}!';
+console.log(translate(myString, { NAME: 'Tanek' }));
 ```
 
 Eventually the code gets changed, and an `undefined` gets passed as the name. Or perhaps the `NAME` is renamed to `FIRST_NAME` but you forget to update the string.
