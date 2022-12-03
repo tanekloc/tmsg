@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/tanekloc/tmsg/compare/x-v0.0.5...x-v0.0.6) (2022-12-03)
+
+
+### Features
+
+* mainatin existing messages during extraction ([af26ae8](https://github.com/tanekloc/tmsg/commit/af26ae8420bda655006fc6c076af6c9c293da2a2))
+
 ## [0.0.5](https://github.com/tanekloc/tmsg/compare/x-v0.0.4...x-v0.0.5) (2022-12-02)
 
 ### Miscellaneous Chores
