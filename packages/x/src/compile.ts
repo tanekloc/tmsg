@@ -8,7 +8,7 @@ import compileModule from '@messageformat/core/lib/compile-module.js';
 export function compile(localesDir: string, outDir: string) {
   localesDir = normalizePath(localesDir);
   outDir = normalizePath(outDir);
-  const files = glob.sync(localesDir + '**/*');
+  const files = glob.sync(localesDir + '**/*.json');
   for (const file of files) {
     const locale = path.basename(file).split('.').shift() as string;
     const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
@@ -20,5 +20,5 @@ export function compile(localesDir: string, outDir: string) {
 }
 
 function normalizePath(p: string): string {
-  return path.normalize(path.join(process.cwd(), p));
+  return path.normalize(path.isAbsolute(p) ? p : path.join(process.cwd(), p));
 }

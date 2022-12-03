@@ -11,7 +11,8 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "tsc --build --clean && tsc --build",
+    "clean": "tsc --build --clean",
+    "build": "tsc --build",
     "test": "npx tsd --files test/types.test-d.ts && node --test dist/test/*.test.js"
   },
   "keywords": [],
