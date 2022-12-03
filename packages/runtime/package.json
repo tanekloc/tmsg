@@ -15,8 +15,13 @@
     "build": "tsc --build",
     "test": "npx tsd --files test/types.test-d.ts && node --test dist/test/*.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "i18n",
+    "translation",
+    "typescript",
+    "MessageFormat"
+  ],
+  "author": "Tanek Loc",
   "license": "MIT",
-  "description": ""
+  "description": "Type-safe i18n library for TypeScript apps based on MessageFormat"
 }

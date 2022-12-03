@@ -13,10 +13,15 @@
     "dist/src"
   ],
   "type": "module",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "i18n",
+    "translation",
+    "typescript",
+    "MessageFormat"
+  ],
+  "author": "Tanek Loc",
   "license": "MIT",
-  "description": "",
+  "description": "Type-safe i18n library for TypeScript apps based on MessageFormat",
   "dependencies": {
     "@messageformat/core": "^3.0.1",
     "glob": "^8.0.3",
