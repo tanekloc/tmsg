@@ -1,5 +1,5 @@
 {
-  "name": "express",
+  "name": "express-example",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -7,12 +7,12 @@
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
-    "sync-locales": "tmsgx sync --outDir ./locales --projectDir .",
+    "sync-locales": "tmsgx sync --outDir ./locales --projectDir .  --locales en de",
     "compile-locales": "tmsgx compile --outDir ./dist/locales --localesDir ./locales"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@tmsg/runtime": "^0.0.5",
