@@ -30,5 +30,9 @@
   "devDependencies": {
     "@types/glob": "^8.0.0",
     "@types/yargs": "^17.0.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanekloc/tmsg.git"
   }
 }

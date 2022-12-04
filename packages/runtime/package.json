@@ -23,5 +23,9 @@
   ],
   "author": "Tanek Loc",
   "license": "MIT",
-  "description": "Type-safe i18n library for TypeScript apps based on MessageFormat"
+  "description": "Type-safe i18n library for TypeScript apps based on MessageFormat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanekloc/tmsg.git"
+  }
 }
