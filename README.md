@@ -58,7 +58,8 @@ tmsgx compile --outDir ./dist/locales --localesDir ./locales
 
 ## [Example projects](/examples/)
 
-1. [`express`](/examples/express)
+1. [`express`](/examples/express-example)
+1. [`react`](/examples/react-example)
 
 ## Roadmap
 
