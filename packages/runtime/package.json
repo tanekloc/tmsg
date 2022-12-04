@@ -11,7 +11,7 @@
   ],
   "type": "module",
   "scripts": {
-    "clean": "tsc --build --clean",
+    "clean": "rimraf dist",
     "build": "tsc --build",
     "test": "npx tsd --files test/types.test-d.ts && node --test dist/test/*.test.js"
   },

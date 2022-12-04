@@ -1,5 +1,7 @@
 # tmsg
 
+> Status: the project is ready to use and should work for small to medium apps. I have only tried on small projects so please give it a try! if you encounter issues, please report them via GitHub.
+
 A TypeScript-based, type-safe internationalization (i18n) library. tmsg is largely compatible with MessageFormat.
 
 ## Problem

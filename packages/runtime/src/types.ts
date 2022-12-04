@@ -1,35 +1,20 @@
-type Delimieters = [' ', '\n', '\t', '{', '}'];
+type Delimieters = [' ', '\n', '\t', '{', '}', ',', '.'];
 
 type TokenizeTmsgFormat<Message extends string> = SplitByDelimiters<
   Message,
   Delimieters
 >;
 
-export type Filter<Input extends readonly unknown[]> = Input extends [
-  infer Head,
-  ...infer Tail,
-]
-  ? Head extends `\\%${infer Name}`
-    ? Filter<Tail>
-    : Head extends `%${infer Name}`
-    ? [Name, ...Filter<Tail>]
-    : Filter<Tail>
-  : [];
+type Params<S extends string> = Filter<TokenizeTmsgFormat<S>>;
 
-export type Params<S extends string> = Filter<TokenizeTmsgFormat<S>>;
+type HasParams<S extends string> = Params<S> extends [] ? never : true;
 
-export type HasParams<S extends string> = Params<S> extends [] ? never : true;
+type ArrayToUnion<Array extends Readonly<string[]>> = Array[number];
 
-export type ArrayToUnion<Array extends Readonly<string[]>> = Array[number];
-
-export type RecordParams<S extends string> = Record<
+type RecordParams<S extends string> = Record<
   ArrayToUnion<Params<S>>,
   string | number | boolean | Date
 >;
-
-export type CreateTArgs<S extends string> = true extends HasParams<S>
-  ? [RecordParams<S>]
-  : [];
 
 type Split<
   T extends string,
@@ -66,3 +51,18 @@ type SplitManyByDelimiters<T extends string[], D extends string[]> = D extends [
 ]
   ? SplitManyByDelimiters<[...SplitMany<T, H>], Tail>
   : T;
+
+export type Filter<Input extends readonly unknown[]> = Input extends [
+  infer Head,
+  ...infer Tail,
+]
+  ? Head extends `\\%${infer Name}`
+    ? Filter<Tail>
+    : Head extends `%${infer Name}`
+    ? [Name, ...Filter<Tail>]
+    : Filter<Tail>
+  : [];
+
+export type CreateArguments<S extends string> = true extends HasParams<S>
+  ? [RecordParams<S>]
+  : [];

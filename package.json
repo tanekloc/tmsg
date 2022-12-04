@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/node": "^18.11.9",
     "prettier": "2.8.0",
+    "rimraf": "^3.0.2",
     "tsd": "^0.24.1",
     "typescript": "^5.0.0-dev.20221201"
   },

@@ -2,7 +2,7 @@
   "name": "@tmsg/x",
   "version": "0.1.0",
   "scripts": {
-    "clean": "tsc --build --clean",
+    "clean": "rimraf dist",
     "build": "tsc --build",
     "test": "node --test dist/test/*.test.js"
   },

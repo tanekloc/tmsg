@@ -1,6 +1,6 @@
 import url from 'url';
 import path from 'path';
-import { Runtime } from '../src/runtime.js';
+import { Runtime } from '../src/i18n.js';
 import { equal } from 'assert/strict';
 import { describe, it } from 'node:test';
 
