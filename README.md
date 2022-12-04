@@ -1,11 +1,10 @@
 # tmsg
 
-> Type-safe i18n library for TypeScript apps.
-> Based on and largely compatible with [MessageFormat](http://messageformat.github.io/messageformat/).
+A TypeScript-based, type-safe internationalization (i18n) library. tmsg is largely compatible with MessageFormat.
 
 ## Problem
 
-You need to translate text strings in your app. Some strings are simple while other require parameters. So you define placeholders for the parameters:
+When translating text strings in a TypeScript app, it is possible for parameters to be undefined or misnamed, leading to errors:
 
 ```ts
 const myString = 'Hello, {NAME}!';
@@ -16,11 +15,13 @@ Over time, the app grows, the code is changed, and an `undefined` gets passed in
 
 ## Solution
 
+To use tmsg, install the `@tmsg/runtime` package:
+
 ```sh
 npm i @tmsg/runtime --save
 ```
 
-Declare your strings in the first argument to the translation `t` function, together with the string paremeters, using the [MessageFormat](http://messageformat.github.io/messageformat/) with a small addition of the `%` character to indicate parameters:
+Declare your strings with the t function, using the [MessageFormat](http://messageformat.github.io/messageformat/) syntax, with the addition of a `%` character to indicate string parameters:
 
 ```ts
 import { configure } from '@tmsg/runtime';
@@ -40,7 +41,7 @@ console.log(t('Hello, {%NAME}!', { FIRST_NAME: 'Tanek' })); // TypeScript error!
 console.log(t('Hello, {%NAME}!', { NAME: undefined })); // TypeScript error!
 ```
 
-Use the [`@tmsg/x`](/packages/x) CLI to automatically find all strings in your code base, export them to JSON files and (after translating) compile translations back to JavaScript:
+The [`@tmsg/x`](/packages/x) CLI can be used to automatically extract strings from your codebase and export them to JSON files, as well as compile translations back to JavaScript:
 
 ```sh
 # Extracts strings from the code base to JSON files.
@@ -51,7 +52,7 @@ tmsgx compile --outDir ./dist/locales --localesDir ./locales
 
 ## Limitations
 
-- Using the function called `t` is important for the CLI to be able to extract strings.
+- The `t` function must be used for the CLI to extract strings.
 
 ## [Example projects](/examples/)
 
