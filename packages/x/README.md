@@ -18,7 +18,7 @@ The `@tmsg/x` CLI can be used to automatically extract strings from your codebas
 
 ```sh
 # Extracts strings from the code base to JSON files.
-tmsgx sync --outDir ./locales --projectDir .
+tmsgx sync --outDir ./locales --projectDir . --locales en de
 # Compile translations to ESM.
 tmsgx compile --outDir ./dist/locales --localesDir ./locales
 ```
