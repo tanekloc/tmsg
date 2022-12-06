@@ -7,8 +7,8 @@
     <a href="https://github.com/tanekloc/tmsg/actions">
       <img src="https://github.com/tanekloc/tmsg/workflows/ci/badge.svg?branch=main">
     </a>
-    <a href="https://bundlephobia.com/package/@tmsg/runtime">
-      <img src="https://img.shields.io/bundlephobia/minzip/@tmsg/runtime">
+    <a href="https://bundlephobia.com/package/@tmsg/runtime@latest">
+      <img src="https://img.shields.io/bundlephobia/minzip/@tmsg/runtime@latest">
     </a>
     <a href="https://www.npmjs.com/package/@tmsg/runtime">
       <img src="https://img.shields.io/npm/dm/@tmsg/runtime">
