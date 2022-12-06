@@ -27,8 +27,9 @@
 
 - Type-safe templates without boilerplate.
 - CLI to automatically find strings to translate in your code.
-- Tiny runtime
-- All features from [MessageFormat](http://messageformat.github.io/messageformat/)
+- Tiny runtime.
+- All features from [MessageFormat](http://messageformat.github.io/messageformat/).
+- Easy to export for translation as strings are stored in JSON.
 
 ## Problem
 
