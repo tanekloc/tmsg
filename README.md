@@ -73,10 +73,11 @@ console.log(t('Hello, {%NAME}!', { NAME: undefined })); // TypeScript error!
 The [`@tmsg/x`](/packages/x) CLI can be used to automatically extract strings from your codebase and export them to JSON files, as well as compile translations back to JavaScript:
 
 ```sh
+npm i @tmsg/x --save-dev
 # Extracts strings from the code base to JSON files.
-tmsgx sync --outDir ./locales --projectDir . --locales en de
+npx tmsgx sync --outDir ./locales --projectDir . --locales en de
 # Compile translations to ESM.
-tmsgx compile --outDir ./dist/locales --localesDir ./locales
+npx tmsgx compile --outDir ./dist/locales --localesDir ./locales
 ```
 
 ## Limitations
