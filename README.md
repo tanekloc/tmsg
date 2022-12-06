@@ -1,8 +1,34 @@
 # tmsg
 
+<p align="center">
+    <i>Truly Type-safe internationalization library for TypeScript</i>
+    <br>
+    <br>
+    <a href="https://github.com/tanekloc/tmsg/actions">
+      <img src="https://github.com/tanekloc/tmsg/workflows/ci/badge.svg?branch=main">
+    </a>
+    <a href="https://bundlephobia.com/package/@tmsg/runtime">
+      <img src="https://img.shields.io/bundlephobia/minzip/@tmsg/runtime">
+    </a>
+    <a href="https://www.npmjs.com/package/@tmsg/runtime">
+      <img src="https://img.shields.io/npm/dm/@tmsg/runtime">
+    </a>
+    <a href="https://www.npmjs.com/package/@tmsg/runtime">
+      <img src="https://img.shields.io/npm/v/@tmsg/runtime?logo=npm">
+    </a>
+    <a href="https://github.com/tanekloc/tmsg/blob/main/LICENSE">
+      <img src="https://img.shields.io/npm/l/@tmsg/runtime">
+    </a>
+</p>
+
 > Status: the project is ready to use and should work for small to medium apps. I have only tried on small projects so please give it a try! if you encounter issues, please report them via GitHub.
 
-A TypeScript-based, type-safe internationalization (i18n) library. tmsg is largely compatible with MessageFormat.
+# Features
+
+- Type-safe templates without boilerplate.
+- CLI to automatically find strings to translate in your code.
+- Tiny runtime
+- All features from [MessageFormat](http://messageformat.github.io/messageformat/)
 
 ## Problem
 
