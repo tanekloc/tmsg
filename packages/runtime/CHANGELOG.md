@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/tanekloc/tmsg/compare/runtime-v0.1.0...runtime-v0.1.1) (2022-12-06)
+
+
+### Documentation
+
+* update ([0747fe2](https://github.com/tanekloc/tmsg/commit/0747fe268c66706411b4694ae5eee7b89c6956d4))
+
 ## [0.1.0](https://github.com/tanekloc/tmsg/compare/runtime-v0.0.5...runtime-v0.1.0) (2022-12-04)
 
 
