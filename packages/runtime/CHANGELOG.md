@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/tanekloc/tmsg/compare/runtime-v0.1.1...runtime-v0.1.2) (2022-12-06)
+
+
+### Miscellaneous Chores
+
+* update main ([b74c494](https://github.com/tanekloc/tmsg/commit/b74c4941ce861e88a32ee6814f83452e48782370))
+
 ## [0.1.1](https://github.com/tanekloc/tmsg/compare/runtime-v0.1.0...runtime-v0.1.1) (2022-12-06)
 
 

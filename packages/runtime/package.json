@@ -1,6 +1,6 @@
 {
   "name": "@tmsg/runtime",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/src/runtime.js",
   "types": "dist/src/runtime.d.ts",
   "directories": {
