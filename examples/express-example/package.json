@@ -15,7 +15,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@tmsg/runtime": "^0.1.0",
+    "@tmsg/runtime": "^0.1.1",
     "express": "^4.18.2"
   },
   "devDependencies": {
