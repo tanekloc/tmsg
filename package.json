@@ -9,7 +9,7 @@
     "format": "npx prettier --write ."
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.11.11",
     "prettier": "2.8.0",
     "rimraf": "^3.0.2",
     "tsd": "^0.25.0",
