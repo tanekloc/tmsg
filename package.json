@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.11",
-    "prettier": "2.8.0",
+    "prettier": "2.8.1",
     "rimraf": "^3.0.2",
     "tsd": "^0.25.0",
     "typescript": "^4.9.3"
