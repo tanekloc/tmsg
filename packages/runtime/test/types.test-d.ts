@@ -48,3 +48,6 @@ expectNotType<[]>(
 expectNotType<[Record<'count', string | number | boolean | Date>]>(
   t('You have a balance of {%balance, number, USD} in your account.'),
 );
+
+expectType<[]>(t('You energy level is 10% test'));
+expectType<[]>(t('You charge level is {\\%test}'));
