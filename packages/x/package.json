@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@types/glob": "^8.0.0",
-    "@types/yargs": "^17.0.17"
+    "@types/yargs": "^17.0.18"
   },
   "repository": {
     "type": "git",
